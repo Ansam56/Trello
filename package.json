@@ -1,0 +1,24 @@
+{
+  "name": "qaproj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@testing-library/cypress": "^10.0.3",
+    "cypress": "^14.5.2"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "save-dev": "^0.0.1-security"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/cucumber/Tests"
+  }
+}
