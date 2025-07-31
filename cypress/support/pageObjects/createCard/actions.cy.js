@@ -1,9 +1,5 @@
 class createCardActions {
-    openBoard(boardUrl){
-        cy.visit(boardUrl)
-        return this;
-    }
-
+  
     clickOnAddACardButton(){
         cy.findByTestId("list-add-card-button").first().click()
         return this;

@@ -11,5 +11,6 @@ module.exports = defineConfig({
       on("file:preprocessor", cucumber());
     },
    // baseUrl: "https://trello.com",
+    screenshotsFolder: "MyScreens",
   },
 });

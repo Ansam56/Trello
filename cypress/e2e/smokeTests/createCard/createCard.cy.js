@@ -4,7 +4,7 @@ import { Given , When , Then } from "cypress-cucumber-preprocessor/steps";
 import dataUtils from "../../../support/datautils.cy";
 import createCardActions from "../../../support/pageObjects/createCard/actions.cy"
 import createCardAssertions from "../../../support/pageObjects/createCard/assertions.cy";
-
+import SharedActions from "../../../support/shared/actions.cy";
 const boardName = "QaProject"
 const cardName = "My Card";
 
@@ -13,9 +13,9 @@ let boardUrl , boardId;
 const dataUtil = new dataUtils();
 const createCardAction = new createCardActions();
 const createCardAssertion = new createCardAssertions();
+const sharedAction = new SharedActions();
 
 before(()=>{
-    // create a board in trello 
     dataUtil.createBoard(boardName)
     .then((response)=>{
         boardUrl = response.body.url
@@ -26,7 +26,7 @@ before(()=>{
 })
 
 Given("The user navigate to the board",()=>{
-    createCardAction.openBoard(boardUrl)
+    sharedAction.openBoard(boardUrl);
 })
 
 When("Clicks on Add a card button",()=>{
