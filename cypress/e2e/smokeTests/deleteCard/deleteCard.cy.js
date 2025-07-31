@@ -24,7 +24,6 @@ before(()=>{
         boardId = response.body.id
         dataUtil.createList(listName,boardId)
     .then((response)=>{
-       // listName = response.body.name
        idList = response.body.id;
         dataUtil.createCard(idList,cardName).then(()=>{
                 cy.loginToTrello()
@@ -62,7 +61,7 @@ When("Clicks on Delete button",()=>{
 
 
 Then("The card will be deleted successfully",()=>{
-    deleteCardAssertion.checkIfCardExists(cardName);
+    deleteCardAssertion.checkCardIsDeleted(cardName);
 })
 
 after(()=>{

@@ -1,5 +1,5 @@
 class deleteCardAssertions {
-    checkIfCardExists(cardName){
+    checkCardIsDeleted(cardName){
         cy.contains(cardName).should('not.exist');
         return this;
     }
