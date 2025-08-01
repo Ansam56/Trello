@@ -7,3 +7,4 @@ Feature: Ceate Template in trello website
         And Types template name in template title input field
         And Click on Add button
         Then The template will be created successfully
+        
