@@ -1,5 +1,5 @@
 class createCardTemplateActions {
-    clicksCardTemplateIcon(listName) {
+    clicksCardTemplateIcon() {
         cy.wait(2000);
         cy.findByTestId("card-template-list-button").first().click();
         return this;
