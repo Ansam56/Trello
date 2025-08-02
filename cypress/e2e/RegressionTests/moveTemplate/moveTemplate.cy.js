@@ -39,11 +39,11 @@ Given("The user navigate to the board", () => {
 });
 
 When("Clicks on template card", () => {
-  moveTemplateAction.clicksOnCard(templateName);
+  sharedAction.clicksOnCard(templateName);
 });
 
 When("Clicks on Actions option", () => {
-  moveTemplateAction.clickOnActionsOption();
+  sharedAction.clickOnActionsOption();
 });
 
 When("Clicks on Move option", () => {

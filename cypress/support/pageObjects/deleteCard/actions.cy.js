@@ -1,15 +1,4 @@
 class deleteCardActions {
-  clicksOnCard(cardName) {
-    cy.wait(2000);
-    cy.contains(cardName).click();
-    return this;
-  }
-
-  clickOnActionsOption() {
-    cy.findByTestId("card-back-actions-button").click();
-    return this;
-  }
-
   clickOnArchiveOption() {
     cy.findByTestId("card-back-archive-button").click();
     return this;
