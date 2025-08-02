@@ -33,7 +33,7 @@ Given("The user navigate to the board",()=>{
     sharedAction.openBoard(boardUrl);
 })
 
-When("Click on template card icon",()=>{
+When("Clicks on template card icon",()=>{
     createCardTemplateAction.clicksCardTemplateIcon(listName);
 })
 
@@ -45,7 +45,7 @@ When("Types template name in template title input field",()=>{
     createCardTemplateAction.typesTemplateName(templateName);
 })
 
-When("Click on Add button",()=>{
+When("Clicks on Add button",()=>{
     createCardTemplateAction.clickOnAddButton(templateName);
 })
 

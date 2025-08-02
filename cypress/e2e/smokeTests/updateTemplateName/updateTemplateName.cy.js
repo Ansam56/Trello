@@ -37,7 +37,7 @@ Given("The user navigate to the board",()=>{
     sharedAction.openBoard(boardUrl);
 })
 
-When("Click on template card",()=>{
+When("Clicks on template card",()=>{
     updateTemplateNameAction.clicksCardTemplate();;
 })
 

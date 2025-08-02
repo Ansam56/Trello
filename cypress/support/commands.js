@@ -24,30 +24,23 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('loginToTrello', () => { 
-
-      cy.visit("/login")
-      cy.fixture("trelloUser").then((user) => {
-      cy.get('[name=username]').type(user.email);
-      cy.get('#login-submit').click();
-      cy.get('#password').type(user.password); 
-      }) 
-      cy.get('#login-submit').click();
-      cy.wait(8000)
+Cypress.Commands.add("loginToTrello", () => {
+  cy.visit("/login");
+  cy.fixture("trelloUser").then((user) => {
+    cy.get("[name=username]").type(user.email);
+    cy.get("#login-submit").click();
+    cy.get("#password").type(user.password);
+  });
+  cy.get("#login-submit").click();
+  cy.wait(8000);
 });
 
-
-Cypress.Commands.add('findByTestId',(testId)=>{
-    cy.get(`[data-testid=${testId}]`)
-  })
+Cypress.Commands.add("findByTestId", (testId) => {
+  cy.get(`[data-testid=${testId}]`);
+});
 
 // Cypress.Commands.add("findByTestId",(testid)=>{
 //   cy.origin('https://trello.com', () => {
 //   cy.get(`[data-testid=${testid}]`)
 //   })
 // })
-
-
-
-
-

@@ -43,7 +43,7 @@ When("Clicks on the card",()=>{
     deleteCardAction.clicksOnCard(cardName);
 })
 
-When("Click on Actions option",()=>{
+When("Clicks on Actions option",()=>{
    deleteCardAction.clickOnActionsOption();
 })
 
