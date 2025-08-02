@@ -1,6 +1,6 @@
 class deleteCardAssertions {
-  checkCardIsDeleted(cardName) {
-    cy.contains(cardName).should("not.exist");
+  checkCardIsDeleted(cardId) {
+    cy.get(`[data-card-id="${cardId}"]`).should("not.exist");
     return this;
   }
 }

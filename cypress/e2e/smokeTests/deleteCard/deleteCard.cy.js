@@ -9,7 +9,7 @@ const boardName = "QaProject";
 const listName = "My List";
 const cardName = "My Card";
 
-let boardUrl, boardId, idList;
+let boardUrl, boardId, idList, cardId;
 
 const dataUtil = new dataUtils();
 const deleteCardAction = new deleteCardActions();
@@ -22,7 +22,8 @@ before(() => {
     boardId = response.body.id;
     dataUtil.createList(listName, boardId).then((response) => {
       idList = response.body.id;
-      dataUtil.createCard(idList, cardName).then(() => {
+      dataUtil.createCard(idList, cardName).then((response) => {
+        cardId = response.body.id;
         cy.loginToTrello();
       });
     });
@@ -55,7 +56,7 @@ When("Clicks on Delete button", () => {
 });
 
 Then("The card will be deleted successfully", () => {
-  deleteCardAssertion.checkCardIsDeleted(cardName);
+  deleteCardAssertion.checkCardIsDeleted(cardId);
 });
 
 after(() => {
