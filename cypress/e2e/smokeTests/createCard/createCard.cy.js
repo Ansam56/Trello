@@ -16,11 +16,11 @@ const createCardAssertion = new createCardAssertions();
 const sharedAction = new SharedActions();
 
 before(() => {
+  cy.loginToTrello();
   dataUtil.createBoard(boardName).then((response) => {
     boardUrl = response.body.url;
     boardId = response.body.id;
   });
-  cy.loginToTrello();
 });
 
 Given("The user navigate to the board", () => {

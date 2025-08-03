@@ -17,6 +17,7 @@ const deleteCardAssertion = new deleteCardAssertions();
 const sharedAction = new SharedActions();
 
 before(() => {
+  cy.loginToTrello();
   dataUtil.createBoard(boardName).then((response) => {
     boardUrl = response.body.url;
     boardId = response.body.id;
@@ -24,7 +25,6 @@ before(() => {
       idList = response.body.id;
       dataUtil.createCard(idList, cardName).then((response) => {
         cardId = response.body.id;
-        cy.loginToTrello();
       });
     });
   });

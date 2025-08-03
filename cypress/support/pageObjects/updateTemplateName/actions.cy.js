@@ -1,10 +1,4 @@
 class updateTemplateNameActions {
-  clicksCardTemplate() {
-    cy.wait(2000);
-    cy.findByTestId("trello-card").first().click();
-    return this;
-  }
-
   clicksaNewTemplateButton() {
     cy.findByTestId("create-new-template-card-button").click();
     return this;

@@ -3,13 +3,14 @@ import SharedActions from "../../shared/actions.cy";
 const sharedAction = new SharedActions();
 class createCardTemplateAssertions {
   checkDialogBanner() {
-    cy.findByTestId("template-card-back-banner").contains(
+    cy.findByTestId("template-card-back-banner").should(
+      "contain",
       "This is a Template card."
     );
     return this;
   }
   checkTemplateCheckIconIsVisible() {
-    cy.findByTestId("card-back-actions-button").click();
+    sharedAction.clickOnActionsOption();
     cy.findByTestId("CheckIcon").should("be.visible");
     return this;
   }

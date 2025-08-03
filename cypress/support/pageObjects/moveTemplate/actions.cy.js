@@ -4,6 +4,7 @@ class moveTemplateActions {
     return this;
   }
   selectsDestinationList(destinationListName) {
+    cy.wait(2000);
     cy.findByTestId(
       "move-card-popover-select-list-destination-select--input-container"
     ).click();

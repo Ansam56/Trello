@@ -18,14 +18,13 @@ const moveTemplateAssertion = new moveTemplateAssertions();
 const sharedAction = new SharedActions();
 
 before(() => {
+  cy.loginToTrello();
   dataUtil.createBoard(boardName).then((response) => {
     boardUrl = response.body.url;
     boardId = response.body.id;
     dataUtil.createList(listName, boardId).then((response) => {
       idList = response.body.id;
-      dataUtil.createCardTemplate(idList, templateName).then(() => {
-        cy.loginToTrello();
-      });
+      dataUtil.createCardTemplate(idList, templateName);
     });
 
     dataUtil.createList(destinationListName, boardId).then((response) => {
