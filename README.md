@@ -6,15 +6,15 @@ This project showcases how to automate Trello board operations using **Cypress**
 
 ## Key Functionalities
 
-1. Create Board       
-2. Delete Board-Api
-3. Create Card Template  
-4. Create Card 
-5. Create List-Api 
-6. Delete Card  
-7. Update Card Template Name 
-8. Move Card Template  
-9. Hide Card Template
+- Create Board
+- Delete Board-Api
+- Create Card Template  
+- Create Card 
+- Create List-Api 
+- Delete Card  
+- Update Card Template Name 
+- Move Card Template  
+- Hide Card Template
     
 ---
 
