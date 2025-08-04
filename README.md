@@ -22,7 +22,7 @@ This project showcases how to automate Trello board operations using **Cypress**
 
 **Cypress** | **Cucumber** | **JavaScript** | **Trello API**  
 
-
+---
 
 ## How to Run the Project
 
@@ -43,7 +43,3 @@ npm install
 ```shell
 npx cypress open
 ```
-   
-
-
-
