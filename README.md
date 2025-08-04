@@ -21,3 +21,29 @@ This project showcases how to automate Trello board operations using **Cypress**
 ## Tech Stack
 
 **Cypress** | **Cucumber** | **JavaScript** | **Trello API**  
+
+
+
+## How to Run the Project
+
+1. Clone the repo:
+```shell
+git clone https://github.com/Ansam56/Trello.git
+cd Trello
+```
+2. Install dependencies:
+```shell
+npm install
+```
+3. Create a folder named Ccumber inside the e2e directory, and within it, create another folder named Tests.
+    
+4. Add your Trello APIKey and APIToken
+   
+5. Run tests:
+```shell
+npx cypress open
+```
+   
+
+
+
