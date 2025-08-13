@@ -48,7 +48,9 @@ When("Clicks on Hide from list option", () => {
 });
 
 Then("The template card will be hidden successfully", () => {
-  hideTemplateAssertion.checksTemplateCardIsHiddenFromList(idList, cardId);
+  hideTemplateAssertion
+    .checksVisisbiltyForShoWInListOption()
+    .checksTemplateCardIsHiddenFromList(idList, cardId);
 });
 
 after(() => {

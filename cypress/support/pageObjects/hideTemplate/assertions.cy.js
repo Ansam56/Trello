@@ -1,6 +1,10 @@
 import SharedActions from "../../shared/actions.cy";
 const sharedAction = new SharedActions();
 class hideTemplateAssertions {
+  checksVisisbiltyForShoWInListOption() {
+    cy.findByTestId("card-back-unarchive-card-button").should("be.visible");
+    return this;
+  }
   checksTemplateCardIsHiddenFromList(idList, cardId) {
     sharedAction.closeCardDialog();
     cy.get(`[data-list-id="${idList}"]`)
